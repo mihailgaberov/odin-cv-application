@@ -1,3 +1,5 @@
-export function Footer() {
+function Footer() {
   return <footer>CV Builder v1.1. Copyright 2024 Mihail Gaberov</footer>;
 }
+
+export default Footer;

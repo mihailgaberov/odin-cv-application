@@ -1,6 +1,6 @@
-import { Logo } from "./Logo";
+import Logo from "./Logo";
 
-export function Header() {
+function Header() {
   return (
     <header>
       <Logo />
@@ -8,3 +8,4 @@ export function Header() {
     </header>
   );
 }
+export default Header;
