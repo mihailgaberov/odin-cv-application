@@ -2,9 +2,9 @@ import Logo from "./Logo";
 
 function Header() {
   return (
-    <header>
+    <header className="flex items-center justify-between text-left border-gray-900">
       <Logo />
-      <div>Welcome to CV Builder</div>
+      <div>CV Builder v1.1</div>
     </header>
   );
 }

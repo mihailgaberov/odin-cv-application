@@ -2,9 +2,10 @@ import { useState } from "react";
 
 import Header from "./components/Header";
 import GeneralInfo from "./components/GeneralInfo";
+import CVPreview from "./components/CVPreview";
 import Education from ".//components/Education";
 import Experience from "./components/Experience";
-import "./App.css";
+
 import Footer from "./components/Footer";
 
 function App() {
@@ -19,11 +20,23 @@ function App() {
           <h1 className="text-3xl font-bold text-center mb-6">
             CV Application
           </h1>
-          <div className="space-y-6">
+          {/* Sections for input */}
+          <div className="grid md:grid-cols-2 gap-6">
             <GeneralInfo onSave={setGeneralInfo} initialData={generalInfo} />
             <Education onSave={setEducation} initialData={education} />
             <Experience onSave={setExperience} initialData={experience} />
           </div>
+
+          {/* CV Preview Section */}
+          {generalInfo && education.length && experience.length && (
+            <div className="mt-8">
+              <CVPreview
+                generalInfo={generalInfo}
+                education={education}
+                practical={experience}
+              />
+            </div>
+          )}
         </div>
       </main>
       <Footer />
