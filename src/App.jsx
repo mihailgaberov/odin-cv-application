@@ -28,7 +28,7 @@ function App() {
           </div>
 
           {/* CV Preview Section */}
-          {generalInfo && education.length && experience.length && (
+          {generalInfo && education.length && experience.length ? (
             <div className="mt-8">
               <CVPreview
                 generalInfo={generalInfo}
@@ -36,6 +36,8 @@ function App() {
                 practical={experience}
               />
             </div>
+          ) : (
+            ""
           )}
         </div>
       </main>

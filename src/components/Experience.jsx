@@ -45,7 +45,7 @@ function Experience({ onSave, initialData }) {
 
   return (
     <div className="p-4 bg-white rounded shadow">
-      <h2 className="text-xl font-semibold mb-4">Practical Experience</h2>
+      <h2 className="text-xl font-semibold mb-4">Experience</h2>
       {isEditing ? (
         <div className="space-y-4">
           {formData.map((entry, index) => (
